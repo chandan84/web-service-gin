@@ -17,8 +17,12 @@ jobs:
         id: pragent
         uses: qodo-ai/pr-agent@main
         env:
-          OPENAI_API_TYPE: "azure"
-          LITELLM_LOG: "DEBUG"
-          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          
+          AZURE_API_KEY: ${{ secrets.AZURE_API_KEY }}
+          
+          OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
+          OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
+          OPENAI_DEPLOYMENT_ID: ${{ secrets.OPENAI_DEPLOYMENT_ID }}
+          
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
