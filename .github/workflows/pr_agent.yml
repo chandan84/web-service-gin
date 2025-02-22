@@ -17,7 +17,9 @@ jobs:
         id: pragent
         uses: qodo-ai/pr-agent@main
         env:
-          
+          GITHUB_ACTION.AUTO_REVIEW: "true"
+          GITHUB_ACTION.AUTO_IMPROVE: "true"
+          GITHUB_ACTION.AUTO_DESCRIBE: "true"
           AZURE_API_KEY: ${{ secrets.AZURE_API_KEY }}
           
           OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
