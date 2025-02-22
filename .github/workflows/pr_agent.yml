@@ -1,6 +1,7 @@
 name: pr_agent_workflow
 on:
   pull_request:
+    branches: ["master"]
     types: [opened, reopened, ready_for_review]
   issue_comment:
 jobs:
@@ -17,11 +18,9 @@ jobs:
         id: pragent
         uses: qodo-ai/pr-agent@main
         env:
-          GITHUB_ACTION_CONFIG.AUTO_REVIEW: "true"
-          GITHUB_ACTION_CONFIG.AUTO_IMPROVE: "true"
-          GITHUB_ACTION_CONFIG.AUTO_DESCRIBE: "true"
-
-          OPENAI_API_TYPE: "azure"
+          GITHUB_ACTION_CONFIG.AUTO_REVIEW: "false"
+          GITHUB_ACTION_CONFIG.AUTO_IMPROVE: "false"
+          GITHUB_ACTION_CONFIG.AUTO_DESCRIBE: "false"
           AZURE_API_KEY: ${{ secrets.AZURE_API_KEY }}
           OPENAI_KEY: ${{ secrets.AZURE_API_KEY }}
           OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
