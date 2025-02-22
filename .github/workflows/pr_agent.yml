@@ -1,4 +1,3 @@
-name: pr_agent_workflow
 on:
   pull_request:
     branches: ["master"]
