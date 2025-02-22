@@ -21,6 +21,7 @@ jobs:
           GITHUB_ACTION_CONFIG.AUTO_IMPROVE: "true"
           GITHUB_ACTION_CONFIG.AUTO_DESCRIBE: "true"
           AZURE_API_KEY: ${{ secrets.AZURE_API_KEY }}
+          OPENAI_API_TYPE: "azure"
           
           OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }}
           OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
